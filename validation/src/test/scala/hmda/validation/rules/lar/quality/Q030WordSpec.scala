@@ -35,7 +35,7 @@ class Q030WordSpec extends WordSpec with PropertyChecks with LarGenerators {
       "property MSA/MD is present" when {
         "tract is NA" when {
           "MSA/MD, state and county match" must {
-            //pass
+            //pass -- Does this include checking if county is large? If county is large, then tract should be reported.
           }
           "MSA/MD, state and county do not match" must {
             //fail
@@ -45,7 +45,7 @@ class Q030WordSpec extends WordSpec with PropertyChecks with LarGenerators {
         }
         "tract is present" when {
           "MSA/MD, state, county, and tract match" must {
-            //pass
+            //pass -- Does this include when the filer is not a CRA filer and reports a tract in a small county?
           }
           "MSA/MD, state, county, and tract do not match" must {
             //fail
@@ -65,7 +65,7 @@ class Q030WordSpec extends WordSpec with PropertyChecks with LarGenerators {
         }
         "tract is present" when {
           "state, county, and tract match" must {
-            //pass
+            //pass--Does this include when the filer is not a CRA filer and reports a tract in a small county?
           }
           "state, county, and tract do not match" must {
             //fail
